@@ -1,0 +1,14 @@
+Data and sources
+
+Actuele wegen: 				http://www.rijkswaterstaat.nl/apps/geoservices/geodata/dmc/actuele_wegenlijst/
+
+Geluidsbelasting weg en rail: 		http://geoservice.pbl.nl/arcgis/rest/services/projecten/Geluidbelasting_weg_en_railverkeer_in_Nederland_20002008/MapServer
+Geluidsbelasting weg rail lucht: 	http://geoservice.pbl.nl/arcgis/rest/services/projecten/Geluidbelasting_weg_rail_en_luchtverkeer_in_Nederland_20002008/MapServer
+Geluidsbelasting wegen :		http://geoservice.pbl.nl/arcgis/rest/services/projecten/Geluidbelasting_wegverkeer_in_Nederland_20002011/MapServer
+
+Nat. Wegenbestand:			http://www.rijkswaterstaat.nl/apps/geoservices/geodata/dmc/nwb-wegen/	
+					http://www.jigsaw.nl/nwb/
+
+referentiepunten:			https://www.google.nl/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.rws.nl%2Fgeotool%2Fgeluidsregister&ei=GMJAVdWDH8ysU8icg7AK&usg=AFQjCNEa_RhyGGjVxEMRn9PS5kgHtPZBXQ&sig2=QW8_k0LPo1BOgrmfWtEfvg&bvm=bv.91665533,d.bGg&cad=rja
+
+weggegevens:				http://www.rijkswaterstaat.nl/apps/geoservices/geodata/dmc/weggeg/	

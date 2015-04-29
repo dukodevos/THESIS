@@ -1,0 +1,66 @@
+\documentclass[]{scrartcl}
+
+\usepackage[sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{tabularx, tabulary, multirow, authblk, microtype, amsmath, setspace, marvosym, graphicx, fullpage}
+\doublespacing
+
+% Title Page
+\title{Research Proposal: Road Noise in the Netherlands}
+\author{Duco de Vos\thanks{d.w.de.vos@student.vu.nl}}
+\affil{Vrije Universiteit Amsterdam}
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+``Missing markets" generally prove an interesting topic for economic analysis. The absence of a market for tranquillity results in external costs of transport noise. In Europe\footnote{EU27 excluding Malta and Cyprus, including Norway and Switzerland} these external costs, caused by annoyance, stress and illness, amount to \EUR17 Billion annually, according to a recent report\citep{CEDelft2011}. In my thesis I will investigate the willingness to pay for transport noise reduction of households in the Netherlands, using the hedonic approach on housing price data. The resulting values of noise reduction have a societal relevance, because this information allows policy-makers to devise policies in such a way that the marginal costs of noise abatement (e.g. construction of sound barriers, traffic management) equal the marginal benefit of abatement (i.e. marginal aggregate willingness to pay for noise reduction). 
+
+In the Netherlands the most recent study of this kind was done in 2004 by \cite{Theebe2004}, concluding that the maximum impact of transport noise is a 3-10\% reduction in house prices. Conducting research with a larger and more recent dataset will test if these results still hold nowadays, or if changes in preferences have occurred. Next to this relatively simple goal of estimating Noise Depreciation Indices for the Netherlands, a large part of my research will focus on the effects of sound barrier wall construction on house prices in the vicinity of these walls. Careful analysis of these effects might lead to willingness to pay values for sound barrier walls, dependent on population density directly behind the wall, that can be compared to construction costs, ultimately addressing the (under)provision of sound barriers. This more intricate part of my research requires more detailed data, and a lot of massaging using GIS software.  
+
+\subsection{Problem Statement}
+
+In short, the research in my thesis revolves around two important questions:
+\begin{enumerate}
+	\item What are households willing to pay for (transport-) noise reduction?
+	\item What are affected households willing to pay for a sound barrier wall?
+\end{enumerate} 
+
+\section{Data and Methods}
+
+\begin{table}[!htbp]
+	\centering%
+	\caption{Available datasets for analysis}
+\begin{tabular}{|m{\dimexpr0.333\textwidth-2\tabcolsep-\arrayrulewidth\relax} | m{\dimexpr0.333\textwidth-2\tabcolsep-\arrayrulewidth\relax} | m{\dimexpr0.15\textwidth-2\tabcolsep-\arrayrulewidth\relax} |}
+	\hline
+	\textbf{Dataset} & \textbf{Content} & \textbf{Period}\\
+	\hline
+	NVM & Transaction prices,  housing characteristics & 2000-2013\\
+	\hline
+	Nationaal Wegenbestand (NWB) & Roads by type, highway ramps & 2008-2015\\
+	\hline
+	Geluidsbelasting Wegverkeer (GBW) & dB countourzones based on road traffic & 2000-2011\\
+	\hline
+	Geluidsbelasting Weg-/Rail-/Luchtverkeer (GBWRL) & dB contourzones based on road-/rail-/air-traffic & 2000-2008\\
+	\hline
+	Geluidswerende voorzieningen (GWV) & Sound barrier objects & 2013 (?)\\
+	\hline
+\end{tabular}
+\end{table}
+
+Table 1 shows the different datasets that will be used in the analysis. All data is georeferenced and available in Shapefile (vector data) or Layer (raster data) format, that allows (or should allow) for manipulation in ArcGIS. 
+
+In order to estimate the willingness to pay for noise reduction, I will add variables denoting distance to nearest highway entrance and environmental noise-level to the NVM dataset, using ArcGIS software. This allows for a separation of the accessibility effect and the noise effect. Distinguishing the accessibility effect is important because noisy areas, close to highways, may be more accessible.  This allows for estimation of a noise depreciation index in a fixed-effects model that regresses (logged) housing prices on various housing characteristics and my accessibility and noise variable. As new highway entrances are built every year, the relevant distance to the nearest highway entrance depends on the year of sale, and anticipation effects (w.r.t. planned highway entrances) may need to be taken into account. Time variability in noise levels needs to be addressed as well.
+
+The estimation of the willingness to pay for sound barriers using data on noise contour zones is not possible, as noise reductions over time are likely to be endogenous to sound barrier construction. Physical distance of a house to a highway might be a good proxy for perceived highway noise. One way to estimate the value of a new noise barrier is to perform a repeat sales analysis on houses in the vicinity of a noise barrier that are sold both before and after the construction of a noise barrier. For this part of the analysis more detailed data (noise barrier construction year) is needed.
+
+\section{Discussion}
+
+Clearly, the above sketched research methods are a little rough around the edges and need some fine tuning As for the data, I presented a somewhat rosy picture of the details: The NVM dataset consists of one million observations and is infested with errors, this needs cleaning up first. Second, the data on noise-contour zones seems to be distributed in a format that does not allow for proper data manipulation in ArcGIS. Finally, the GWV dataset, on noise barriers, only consists of the ``stock" of noise barriers in effect per 1-1-2013, it does not contain construction year details. This last piece of information is somewhat worrisome as I find that the most interesting result of this thesis should be the ``value" of a sound barrier wall. Although there is nothing wrong with an up to date noise depreciation index for the Netherlands, there is no novelty in it, and it seems less insightful.
+
+\bibliography{BibFile}
+\bibliographystyle{apalike}
+
+\end{document}          
