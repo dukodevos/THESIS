@@ -1,0 +1,61 @@
+\documentclass[]{scrartcl}
+
+\usepackage[sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{tabularx, tabulary, multirow, authblk, microtype, amsmath, setspace, marvosym, graphicx, fullpage}
+\doublespacing
+
+%opening
+\title{The Value of Highway Noise Barriers}
+\author{Duco de Vos\thanks{d.w.de.vos@student.vu.nl}}
+\affil{Vrije Universiteit Amsterdam}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction}
+
+Transport noise is a costly affair. Substantial noise levels can cause annoyance, stress and illness. According to a European report \citep{CEDelft2011}, the external cost of noise induced by road transport in Europe\footnote{EU27 excluding Malta and Cyprus, including Norway and Switzerland.} amounts to \EUR17 Billion annually. In Europe the Environmental Noise Directive\footnote{European Commission, 2002. Environmental noise directive 2002/49/EG.} aims to reduce harmful noise exposure of citizens. Without specifying limit noise values, this directive still gives governments the incentive to devise policy measures against noise. In the Netherlands local noise limit values are specified for highways\footnote{Chapter 11.3, Wet Milieubeheer, 2012}. Using a combination of acoustical models and measurements, the Dutch highway authority (Rijkswaterstaat) determines if these limit values are reached and, if so, which measures should be taken to reduce noise-nuisance \citep{DeVos2015}. The main goal of noise abatement measures is to minimize the external costs of noise, in the absence of a market for tranquillity. In the Netherlands the negative external effects of road noise may, partly, be mitigated by road and fuel taxes, in combination with policy measures such as vehicle regulation, silent tarmac, traffic-management systems, noise barrier walls, and ultimately housing insulation\citep{RIVM2001}. 
+
+The existence of demand for road noise mitigating measures and the costly supply of these policy instruments implies a trade-off between accepting noise levels and employing resources to hamper noise generation and/or propagation. Cost-benefit Analysis, which results in the net present value of all (social) costs and benefits involved in a project, is often employed in the decision-making process on whether or not to use a certain policy instrument. The absence of a market for tranquillity implies a need for "Willigness to pay" estimations for noise reduction measures, as the CBA technique requires all costs and benefits of a project to be measured in the same metric, usually money.
+
+Although there is a strand of economic literature that deals with the negative effects of highway noise (see \cite{Nelson1982,Nelson2008,Bateman1993}), generally these studies estimate WTP values for noise reduction in dB(a), and little emphasis is put on the effectiveness of employed abatement measures. In this Master Thesis I investigate the effect of newly built highway noise barriers on transaction prices of residential properties in the immediate vicinity of these noise barriers. This work is structured as follows: Section 2 gives a dense literature overview, section 3 describes the empirical modelling framework, in section 4 I discuss the different data and their sources, section 5 presents the estimation results and section 6 concludes.
+
+\section{Literature review}
+
+
+
+\section{Methodology}
+
+\section{Data}
+
+\subsection{Real estate data}
+
+The objective of this thesis research is to estimate the causal effect of the construction of a noise barrier between a noisy road and nearby residential properties, on the transaction prices of these properties. I use a dataset by the Dutch Association of Real Estate Agents (NVM) that contains all housing transactions of affiliated Real Estate Agents in the Netherlands between 2005 and 2013, roughly 70\% of total transactions. The dataset contains information on transaction prices and several housing attributes such as house- and lot size, type of house, number of rooms, the presence of a garden or garage and the monumental status. As this data is geo-referenced, it can be enriched by combining with other (spatial) data (in this case infrastructure objects) using Geographic Information Systems.
+
+\subsection{Infrastructure data}
+
+The main part of my analysis focuses on residential properties that experience a level of highway noise. The relevant geographical area therefore is limited to all locations in the Netherlands within hearing range from a highway: dependent on local conditions this is within a range of 350-500 meters from a highway\citep{Nelson1982}. Within this buffer zone around highways it is important to capture variation in the presence of noise barriers between residences and noise generating highways, and to correct for variation in the net effect of a nearby highway, as the interplay between nuisance and accessibility varies over space\footnote{Imagine two houses located near a highway, one in the immediate vicinity of a highway entrance, and one located 4 kilometres away from the nearest entrance. Clearly the net effect will differ.}. 
+
+Data on infrastructure is provided by the Dutch Road Authority (Rijkswaterstaat). Road locations are provided in a spatially referenced line dataset (Nationaal Wegenbestand), that contains detailed information, distinguishing directions and various subtypes such as entry- and exit ramps and crossings, for the years 2005, 2008, and 2009-2015. Using Geographic Information Systems I selected all roads that fall under the authority of the Dutch Highway Authority (RWS) and I subsequently calculated the euclidian distance from each house sale location to the nearest highway. To obtain locations of highway entry ramps I selected all highway entry ramps from the NWB dataset, and I calculated the geographical mean for each pair of entry ramps that share the same entry name. For each house sale, the distance to the nearest entry ramp was calculated.
+
+\subsection{Noise data}
+
+\section{Results}
+
+\subsection{Regressions}
+
+\subsection{Robustness}
+
+\section{Conclusion}
+
+
+\bibliography{BibFile}
+\bibliographystyle{apalike}
+
+\end{document}

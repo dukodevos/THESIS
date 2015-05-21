@@ -1,0 +1,56 @@
+\documentclass[]{scrartcl}
+
+\usepackage[sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{tabularx, tabulary, multirow, authblk, microtype, amsmath, setspace, marvosym, graphicx, fullpage}
+\doublespacing
+
+% Title Page
+\title{Mid-term thesis report: Road Noise in the Netherlands}
+\author{Duco de Vos\thanks{d.w.de.vos@student.vu.nl}}
+\affil{Vrije Universiteit Amsterdam}
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+My thesis deals with the problem of road noise. The last few weeks I have been cleaning and enriching the NVM dataset on housing prices (2000-2013), and I performed several statistical tests that show ambiguous results, to put it mildy. Until now I focused on the problem of valuation of highway noise barriers. I recently found data on the location of noise barriers in the Netherlands between 2005 and now. With this yearly data I can determine if a sound barrier is built, or whether one is removed by comparing with preceding years. The statistical tests I did (house, pc6 and pc5 fixed effects) show no significant results, and in many cases a negative sign for sound barrier construction, contrary to the intuition that less road noise will have a positive effect on housing prices.
+
+\subsection{Problem statement}
+The objective of my thesis remains to answer the following questions:
+\begin{enumerate}
+	\item What are households willing to pay for (transport-) noise reduction?
+	\item What are affected households willing to pay for a sound barrier wall?
+\end{enumerate} 
+One possible strategy might be to put more focus on the first question, because of the lack of data and/or variation in sound barrier wall construction. 
+
+\section{Data use}
+My work until now was mainly focused on data handling, cleaning and on adding important variables. The data I used is listed below:
+
+\begin{table}[!htbp]
+	\centering%
+	\caption{Available datasets for analysis}
+	\begin{tabular}{|m{\dimexpr0.4\textwidth-2\tabcolsep-\arrayrulewidth\relax} | m{\dimexpr0.333\textwidth-2\tabcolsep-\arrayrulewidth\relax} | m{\dimexpr0.15\textwidth-2\tabcolsep-\arrayrulewidth\relax} |}
+		\hline
+		\textbf{Dataset} & \textbf{Content} & \textbf{Period}\\
+		\hline
+		NVM & Transaction prices,  housing characteristics & 2000-2013\\
+		\hline
+		Nationaal Wegenbestand (NWB) & Roads by type, highway ramps & 2008-2015\\
+		\hline
+		Actuele Wegenlijst RWS & RWS "operated" roads in the Netherlands & 1999-now\\
+		\hline
+		Weggegevens (geluidsbeperkingen) & Sound barrier objects & 2005-2015\\
+		\hline
+	\end{tabular}
+\end{table}
+
+The table above shows the limited data availablity for several years. My first step was to clean up the dataset (with the help of Hans Koster) and calculate for each house sale the distance to the nearest sound barrier, the nearest highway stretch and the nearest highway ramp, using ArcGIS software. To account for possible anticipation effects, I calculated the distance to the infrastructure object in the year of sale, and the distance 1 and 2 years later. For highway ramps in 2005, 2006 and 2007 I used 2008 data, which may induce some bias. Using RWS operated roads (Actuele Wegenlijst data) seems appropriate as the data on sound barrier objects only deals with RWS roads as well. 
+
+\section{Progress}
+
+Although it is quite a setback to discover that I have insufficient observations to study what I want to study, I already learnt a lot during the thesis process. I developed my Stata and R skills, and I figured out how to combine ArcGIS with Python scripting. These skills will speed up the remainder of my thesis process. The scripts I wrote are the only tangible products, as I have nothing on paper yet. The next step will be to look for usable noise-nuisance maps of the Netherlands, to have a safe plan B. This data might be available at PBL or RIVM. Furthermore I will contact Rijkswaterstaat to get some information on the construction of soundbarriers, and maybe additional data. I will also work on a better model specification. One important issue is to distinguish between an accessibility-effect and a nuisance effect of highways. Some tests I did show a positive effect of logged highway ramp distance, which implies that moving further from a (nearest) highway ramp, housing prices increase. This counter-intuitive result might imply some confounding factors, or just an error.
+
+
+\end{document}          

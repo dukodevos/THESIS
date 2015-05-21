@@ -1,27 +1,56 @@
+# Author: Duco de Vos
+# Description: Script to concatenate NVM year subsets, including sound barrier, highway and ramp distance (added in ArcGIS) 
+
+#Load libraries
+library(foreign)
 
 #Import data
-NVM2006 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2006.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2007 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2007.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2008 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2008.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2009 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2009.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2010 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2010.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2011 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2011.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2012 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2012.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
-NVM2013 <- read.table(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM\\NVM2013.txt", quote = "", header=TRUE, sep=";", fill=TRUE)
+NVM2005 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2005.dbf")
+NVM2006 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2006.dbf")
+NVM2007 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2007.dbf")
+NVM2008 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2008.dbf")
+NVM2009 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2009.dbf")
+NVM2010 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2010.dbf")
+NVM2011 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2011.dbf")
+NVM2012 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2012.dbf")
+NVM2013 <- read.dbf(file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ArcGisProjects\\CalculateDistances\\data\\NVM_2013.dbf")
 
 #Merge
-NVM2006$NEAR_FID <- NULL
-NVM2006$NEAR_DIST <- NULL
-NVM <- rbind(NVM2006, NVM2007, NVM2008, NVM2009, NVM2010, NVM2011, NVM2012, NVM2013)
-
-#Remove duplicate columns
-#NVM <- NVM[, -grep("1$", colnames(NVM))]
+NVM <- rbind(NVM2005, NVM2006, NVM2007, NVM2008, NVM2009, NVM2010, NVM2011, NVM2012, NVM2013)
 
 #Transform some vars
-NVM$logRampDist <- log(NVM1$rampDist)
-NVM$logHwDist <- log(NVM1$HwDist)
-NVM$logSoundbDist <- log(NVM1$SoundbDist)
-NVM$ramp <- factor(NVM1$rampDist < 1000)
+NVM$logrampDist <- log(NVM$rampDist)
+NVM$logrampDist1 <- log(NVM$rampDist1)
+NVM$logrampDist2 <- log(NVM$rampDist2)
+NVM$loghwDist <- log(NVM$hwDist)
+NVM$loghwDist1 <- log(NVM$hwDist1)
+NVM$loghwDist2 <- log(NVM$hwDist2)
+names(NVM)[names(NVM) == "soundDist1"] <- "soundbDist1"
+names(NVM)[names(NVM) == "soundDist2"] <- "soundbDist2"
+NVM$logsoundbDist <- log(NVM$soundbDist)
+NVM$logsoundbDist1 <- log(NVM$soundbDist1)
+NVM$logsoundbDist2 <- log(NVM$soundbDist2)
+NVM$ramp <- factor(NVM$rampDist < 1000)
+NVM$pc5 <- substr(NVM$pc6, 1, 5)
+NVM$soundbDif1 <-  
+NVM$soundbDif2 <- 
+  
+#nearsound.cat <- function(x, lower = 0, upper, by = 100,  
+#  labs <- c(paste(seq(lower, upper - by, by = by),
+#                  seq(lower + by - 1, upper - 1, by = by),
+#                  sep = sep),
+#            paste(upper, above.char, sep = ""))
+#  
+#  cut(floor(x), breaks = c(seq(lower, upper, by = by), Inf),
+#      right = FALSE, labels = labs)
+#}
+
+#To do fix nice var
+#NVM$rightside <- NVM$soundbDist <= NVM$hwDist
+#NVM$rightside1 <- NVM$soundDist1 <= NVM$hwDist1
+#NVM$rightside2 <- NVM$soundDist2 <= NVM$hwDist2
+#NVM$nearsound <- factor(as.numeric(nearsound.cat(NVM$soundbDist, upper = 600))*as.numeric(NVM$rightside))
 
 #Export to .csv file
-write.csv(NVM1, file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM20062013.csv", quote = TRUE)
+write.dta(NVM, file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM20052013.dta")
+write.csv(NVM, file = "C:\\Users\\Pieter\\Documents\\StreemMaster\\THESIS\\Data\\ConstructedData\\NVM20052013.csv", quote = TRUE)
