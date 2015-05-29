@@ -6,10 +6,28 @@ Bateman, I. (1993).
   Techniques}}.
 \newblock CSERGE.
 
+\bibitem[Bateman et~al., 2001]{Bateman2001}
+Bateman, I., Day, B., and Lake, I. (2001).
+\newblock {The Effect of Road Traffic on Residential Property Values : A
+  Literature Review and Hedonic Pricing Study}.
+\newblock (January).
+
+\bibitem[Bristow et~al., 2014]{Bristow2014}
+Bristow, A.~L., Wardman, M., and Chintakayala, V. P.~K. (2014).
+\newblock {International meta-analysis of stated preference studies of
+  transportation noise nuisance}.
+\newblock {\em Transportation}, pages 71--100.
+
 \bibitem[{CE Delft} et~al., 2011]{CEDelft2011}
 {CE Delft}, Infras, and {Fraunhofer ISI} (2011).
 \newblock {External Costs of Transport in Europe Update Study for 2008}.
 \newblock Technical Report September, Delft.
+
+\bibitem[Day et~al., 2007]{Day2007}
+Day, B., Bateman, I., and Lake, I. (2007).
+\newblock {Beyond implicit prices: Recovering theoretically consistent and
+  transferable values for noise avoidance from a hedonic property price model}.
+\newblock {\em Environmental and Resource Economics}, 37(1):211--232.
 
 \bibitem[de~Vos, 2015]{DeVos2015}
 de~Vos, P.~H. (2015).
@@ -17,6 +35,29 @@ de~Vos, P.~H. (2015).
   Netherlands}.
 \newblock In {\em Noise and Vibration Mitigation for Rail Transportation
   Systems.}, pages 7--12.
+
+\bibitem[Dekkers and van~der Straaten, 2009]{Dekkers2009}
+Dekkers, J. E.~C. and van~der Straaten, J.~W. (2009).
+\newblock {Monetary valuation of aircraft noise: A hedonic analysis around
+  Amsterdam airport}.
+\newblock {\em Ecological Economics}, 68(11):2850--2858.
+
+\bibitem[den Boer and Schroten, 2007]{DenBoer2007}
+den Boer, L. and Schroten, A. (2007).
+\newblock {Traffic noise reduction in Europe}.
+\newblock Technical Report August, CE Delft.
+
+\bibitem[Gillen, 2003]{Gillen2003}
+Gillen, D. (2003).
+\newblock {"The economics of noise."}.
+\newblock In {\em Handbook of Transport and the Environment}, pages 81--95.
+
+\bibitem[Navrud and Strand, 2011]{Navrud2011}
+Navrud, S.~l. and Strand, J. (2011).
+\newblock {Using hedonic pricing for estimating compensation payments for noise
+  and other externalities from new roads}.
+\newblock In {\em The International Handbook on Non-Market Environmental
+  Valuation}, pages 14--36. Edward Elgar Publishing, Cheltenham/Northampton.
 
 \bibitem[Nelson, 1982]{Nelson1982}
 Nelson, J.~P. (1982).
@@ -31,9 +72,37 @@ Nelson, J.~P. (2008).
   {\em Hedonic Methods in Housing Market Economics}, number October 2007, pages
   57--82. Springer.
 
+\bibitem[Nijland et~al., 2003]{Nijland2003}
+Nijland, H., {Van Kempen}, E., {Van Wee}, G., and Jabben, J. (2003).
+\newblock {Costs and benefits of noise abatement measures}.
+\newblock {\em Transport Policy}, 10(2):131--140.
+
 \bibitem[RIVM, 2001]{RIVM2001}
 RIVM (2001).
 \newblock {Valuing the benefits of environmental policy: The Netherlands}.
 \newblock Technical Report March.
+
+\bibitem[Rosen, 1974]{Rosen1974}
+Rosen, S. (1974).
+\newblock {Hedonic Prices and Implicit Markets: Product Differentiation in Pure
+  Competition}.
+\newblock {\em Journal of Political Economy}, 82(1):34.
+
+\bibitem[Swardh et~al., 2012]{Swardh2012}
+Swardh, J.-E., Andersson, H., Jonsson, L., and \"{O}gren, M. (2012).
+\newblock {Estimating non-marginal willingness to pay for railway noise
+  abatement : Application of the two-step hedonic regression}.
+\newblock (December).
+
+\bibitem[Theebe, 2004]{Theebe2004}
+Theebe, M. (2004).
+\newblock {Planes, Tranes, and Automobiles: The Impact of Traffic Noise on
+  House Prices}.
+\newblock {\em Journal of Real Estate Finance and Economics}, 28(2/3):209--234.
+
+\bibitem[Verhoef et~al., 1995]{Verhoef1995}
+Verhoef, E.~T., Nijkamp, P., and Rietveld, P. (1995).
+\newblock {Second-best Regulation of Road Transport Externalities}.
+\newblock {\em Journal of Transport Economics and Policy}, 29:147--167.
 
 \end{thebibliography}

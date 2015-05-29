@@ -1,8 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: document.aux
 The style file: apalike.bst
 Database file #1: BibFile.bib
+Warning--empty journal in Bateman2001
+Warning--there's a number but no volume in Bateman2001
 Warning--empty institution in CEDelft2011
 Warning--empty publisher in DeVos2015
+Warning--empty publisher in Gillen2003
 Warning--there's a number but no series in Nelson2008
 Warning--empty institution in RIVM2001
-(There were 4 warnings)
+Warning--empty journal in Swardh2012
+Warning--there's a number but no volume in Swardh2012
+(There were 9 warnings)
