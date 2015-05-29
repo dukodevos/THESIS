@@ -108,64 +108,17 @@
 		As mentioned in section \ref{sec:method}, the sample should only include properties within hearing distance of a highway. Academic literature suggests using a threshold distance of approximately 350 meters \citep{Nelson1982}. I start with observations that are located within 1,000 meters of highway and examine the effect of taking smaller threshold values. To exclude outliers I restrict the sample to only include properties that are located within 5,000 meters of a highway ramp. Robustness of results will be checked against various alternative distances.
 		
 		\subsection{Descriptives}
+        Table 1 reports summary statistics on the variables included in the regression. Note that these descriptives only involve the observations located within 1000 meters from a highway: this is a relatively loose interpretation of hearing distance. Also, years are aggregated in this table. I will discuss some interesting outcomes of the decriptive statistics. The data shows that ((in-)transparent) noise screens and berm barriers are the most frequently employed types of noise barriers. Noise barrier walls with a overhanging roof are scarce. Furthermore, over time, most roads included show speed limits of 100 km or higher, and almost 60 percent of roads is paved with silent tarmac.
 
-\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
-\begin{tabular}{l c c c c }\hline\hline
-\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
- & \textbf{Std. Dev.}& \textbf{Min.} &  \textbf{Max.} \\ \hline
-Transaction price (\EUR) & 281870.671 & 131185.43 & 39000 & 1000000 \\
-Size (m2) & 126.521 & 34.363 & 34 & 250 \\
-Number of rooms & 4.789 & 1.138 & 1 & 17 \\
-\\
-Transparent noise screen & 0.065 & 0.246 & 0 & 1 \\
-In-transparent noise screen & 0.148 & 0.356 & 0 & 1 \\
-Noise barrier wall & 0.049 & 0.216 & 0 & 1 \\
-Noise barrier wall with roof & 0.004 & 0.062 & 0 & 1 \\
-Berm barrier & 0.061 & 0.239 & 0 & 1 \\
-Berm and screen combination & 0.072 & 0.258 & 0 & 1 \\
-\\
-Maximum speed 70-90 km/h & 0.155 & 0.362 & 0 & 1 \\
-Maximum speed 100 km/h & 0.516 & 0.5 & 0 & 1 \\
-Maximum speed 120-130 km/h & 0.345 & 0.475 & 0 & 1 \\
-\\
-Normal asphalt & 0.419 & 0.493 & 0 & 1 \\
-Porous asphalt (Silent tarmac) & 0.581 & 0.493 & 0 & 1 \\
-\\
-Distance to nearest highway ramp (km) & 1263.309 & 786.599 & 30 & 4998 \\
-Distance to nearest highway stretch & 580.686 & 252.41 & 11 & 1000 \\
-Distance to nearest noise barrier & 1128.161 & 1312.093 & 21 & 10585 \\
-\\
-Garage & 0.255 & 0.436 & 0 & 1 \\
-Garden & 0.979 & 0.143 & 0 & 1 \\
-Central heating & 0.97 & 0.171 & 0 & 1 \\
-Listed as monument & 0.003 & 0.057 & 0 & 1 \\
-Maintained good & 0.873 & 0.333 & 0 & 1 \\
-\\
-Apartment & 0.067 & 0.249 & 0 & 1 \\
-Terraced & 0.539 & 0.499 & 0 & 1 \\
-Semi-detached & 0.336 & 0.472 & 0 & 1 \\
-Detached & 0.059 & 0.235 & 0 & 1 \\
-\\
-Construction before 1945 & 0.233 & 0.423 & 0 & 1 \\
-Construction 1945-1959 & 0.073 & 0.261 & 0 & 1 \\
-Construction 1960-1970 & 0.134 & 0.341 & 0 & 1 \\
-Construction 1971-1980 & 0.169 & 0.375 & 0 & 1 \\
-Construction 1981-1990 & 0.139 & 0.346 & 0 & 1 \\
-Construction 1991-2000 & 0.169 & 0.374 & 0 & 1 \\
-Construction later than 2000 & 0.083 & 0.275 & 0 & 1 \\
-\multicolumn{1}{c}{N} & \multicolumn{4}{c}{72306}\\ \hline
-\end{tabular}
-\end{table}
-
-
-
-       
-	
+     
 	\section{Results}
 	\label{sec:results}
 	
 		\subsection{Regressions}
+
 	
+    
+
 		\subsection{Robustness}
 	
 	\section{Conclusion}
